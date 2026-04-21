@@ -1,0 +1,22 @@
+{
+  "instance_id": "realmshield__idor-demo-001",
+  "pipeline": "shield",
+  "repo": {
+    "source_url": "local://micro1ai/idor-demo/repo",
+    "base_commit": "",
+    "image_name": "micro1ai/idor-demo:idor-demo-001-v2",
+    "repo_dir": "/app",
+    "language": "python"
+  },
+  "test_cmd": "cd /app && pytest -q tests/test_projects.py",
+  "FAIL_TO_PASS": [
+    "tests/test_projects.py::test_user_cannot_access_other_users_project"
+  ],
+  "PASS_TO_PASS": [
+    "tests/test_projects.py::test_root",
+    "tests/test_projects.py::test_owner_can_access_own_project"
+  ],
+  "e2b_template_id": "",
+  "hidden_test_patch": "test_patch.diff",
+  "golden_patch": "gold_patch.diff"
+}

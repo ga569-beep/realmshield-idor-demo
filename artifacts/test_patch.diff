@@ -1,0 +1,11 @@
+--- /tmp/test_projects_base.py	2026-04-20 15:25:10
++++ /tmp/test_projects_hidden.py	2026-04-20 15:25:10
+@@ -17,3 +17,8 @@
+     body = response.json()
+     assert body["id"] == 1
+     assert body["owner_id"] == 1
++
++
++def test_user_cannot_access_other_users_project():
++    response = client.get("/projects/2", headers={"X-User-ID": "1"})
++    assert response.status_code == 403

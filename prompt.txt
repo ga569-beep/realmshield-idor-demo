@@ -1,0 +1,1 @@
+Users have reported that directly accessing project URLs sometimes returns records that do not belong to the authenticated user. Investigate the issue and provide a secure fix without breaking normal project access for legitimate owners.
