@@ -10,12 +10,6 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app ./app
-COPY tests ./tests
-COPY pytest.ini .
-COPY prompt.txt .
-COPY artifacts ./artifacts
-
-RUN touch app/__init__.py app/routes/__init__.py
+COPY . /app
 
 CMD ["pytest", "-q"]

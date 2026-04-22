@@ -1,22 +1,53 @@
 {
+
   "instance_id": "realmshield__idor-demo-001",
+
   "pipeline": "shield",
+
+  "task_type": "security",
+
+  "cwe_ids": ["CWE-639", "CWE-284"],
+
+  "owasp": ["A01:2025"],
+
+  "cvss_band": "MEDIUM",
+
   "repo": {
-    "source_url": "local://micro1ai/idor-demo/repo",
-    "base_commit": "",
-    "image_name": "micro1ai/idor-demo:idor-demo-001-v2",
+
+    "source_url": "https://github.com/ga569-beep/realmshield-idor-demo",
+
+    "base_commit": "10019ce075e9e45c0e5b2da66b8bfdff51e8e3c2",
+
+    "image_name": "micro1ai/idor-demo:idor-demo-001-v3",
+
     "repo_dir": "/app",
+
     "language": "python"
+
   },
+
   "test_cmd": "cd /app && pytest -q tests/test_projects.py",
-  "FAIL_TO_PASS": [
-    "tests/test_projects.py::test_user_cannot_access_other_users_project"
-  ],
-  "PASS_TO_PASS": [
-    "tests/test_projects.py::test_root",
-    "tests/test_projects.py::test_owner_can_access_own_project"
-  ],
+
+  "log_parser": "parse_log_pytest",
+
   "e2b_template_id": "",
+
+  "FAIL_TO_PASS": [
+
+    "tests/test_projects.py::test_user_cannot_access_other_users_project"
+
+  ],
+
+  "PASS_TO_PASS": [
+
+    "tests/test_projects.py::test_root",
+
+    "tests/test_projects.py::test_owner_can_access_own_project"
+
+  ],
+
   "hidden_test_patch": "test_patch.diff",
+
   "golden_patch": "gold_patch.diff"
+
 }
