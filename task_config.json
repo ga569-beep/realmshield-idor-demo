@@ -16,9 +16,9 @@
 
     "source_url": "https://github.com/ga569-beep/realmshield-idor-demo",
 
-    "base_commit": "10019ce075e9e45c0e5b2da66b8bfdff51e8e3c2",
+    "base_commit": "c1ecab1cba7de74a80d56ad1e6e88318d0cd3c2f",
 
-    "image_name": "micro1ai/idor-demo:idor-demo-001-v3",
+    "image_name": "micro1ai/idor-demo:idor-demo-001-v4",
 
     "repo_dir": "/app",
 
